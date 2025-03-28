@@ -11,7 +11,7 @@ list_of_files = [
     "setup.py",
     "app.py",
     "research/trials.ipynb",
-    
+    "test.py"
 
 ]
 
