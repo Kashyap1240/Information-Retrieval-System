@@ -8,6 +8,7 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from dotenv import load_dotenv
 
+
 load_dotenv()
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")  
 os.environ['GOOGLE_API_KEY'] =  GOOGLE_API_KEY
@@ -34,6 +35,7 @@ def get_vector_store(text_chunks):
     embeddings = GooglePalmEmbeddings()
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     return vector_store
+
 
 
 def get_conversational_chain(vector_store):
